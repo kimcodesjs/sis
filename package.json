@@ -10,6 +10,7 @@
     "dev-server": "webpack-dev-server"
   },
   "dependencies": {
+    "react-router-dom": "^5.1.2",
     "validator": "8.0.0"
   },
   "devDependencies": {
@@ -26,7 +27,6 @@
     "react-dom": "^16.8.6",
     "react-modal": "^3.8.1",
     "react-redux": "^7.1.0",
-    "react-router-dom": "^5.0.1",
     "redux": "^4.0.4",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
