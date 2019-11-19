@@ -1,17 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import AppRouter from './AppRouter'
-import { Provider } from 'react-redux'
-import 'normalize.css/normalize.css'
-import './styles/styles.scss'
+import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom'
+import Welcome from './components/Welcome'
+import Artisan from './components/Artisan'
+import Classic from './components/Classic'
 
-//const store = configureStore()
-
-const jsx = (
-    // <Provider store={store}>
-    //     <AppRouter />
-    // </Provider>
-    <AppRouter />
+const AppRouter = () => (
+    <BrowserRouter>
+        <div> 
+            <Switch>
+                <Route path="/" component={Welcome} exact={true} />
+                <Route path="/artisan" component={Artisan} />
+                <Route path="/classics" component={Classic} />
+            </Switch>
+        </div>
+    </BrowserRouter>
 )
-ReactDOM.render(jsx, document.getElementById('app'))
+ReactDOM.render(<AppRouter />, document.getElementById('app'))
 
