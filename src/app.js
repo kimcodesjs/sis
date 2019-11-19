@@ -9,13 +9,15 @@ import NavPanel from './components/NavPanel'
 const AppRouter = () => (
     <div>
         <BrowserRouter>
-            <div> 
-                <Switch>
-                    <Route path="/" component={Welcome} exact={true} />
-                    <Route path="/artisan" component={Artisan} />
-                    <Route path="/classic" component={Classic} />
-                </Switch>
-            </div>
+
+            <NavPanel />
+
+            <Switch>
+                <Route path="/" component={Welcome} exact={true} />
+                <Route path="/artisan" component={Artisan} />
+                <Route path="/classic" component={Classic} />
+            </Switch>
+                
         </BrowserRouter>
     </div>
 )
