@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom'
 import Welcome from './components/Welcome'
 import Artisan from './components/Artisan'
 import Classic from './components/Classic'
+import NavPanel from './components/NavPanel'
 
 const AppRouter = () => (
     <div>
@@ -18,5 +19,6 @@ const AppRouter = () => (
         </BrowserRouter>
     </div>
 )
+
 ReactDOM.render(<AppRouter />, document.getElementById('app'))
 

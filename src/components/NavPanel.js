@@ -6,12 +6,15 @@ const NavPanel = () => {
   return (
   <div>
     <ul>
-          <li>
-            <Link to="artisan">Artisan Soaps</Link>
-          </li>
-          <li>
-            <Link to="/classic">Classic Soaps</Link>
-          </li>
+        <li>
+          <Link to="artisan">Artisan Soaps</Link>
+        </li>
+        <li>
+          <Link to="/classic">Classic Soaps</Link>
+        </li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
     </ul>
   </div>
   )

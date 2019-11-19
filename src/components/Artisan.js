@@ -1,8 +1,10 @@
 import React from 'react'
+import NavPanel from './NavPanel'
 
 const Artisan = () => (
     <div>
-        <h1>Artisan Soaps</h1>
+        <NavPanel />
+        <h1>Artisan Soaps</h1> 
     </div>
 )
 
