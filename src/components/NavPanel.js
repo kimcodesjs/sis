@@ -1,15 +1,20 @@
 import React from 'react'
-import NavLink from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
-const NavPanel = () => (
-        <NavLink 
-            to="/artisan" 
-            activeStyle={{
-                fontWeight: "bold",
-                color: "blue"
-            }}>
-          Artisan
-        </NavLink>
-)
+const NavPanel = () => {
+  
+  return (
+  <div>
+    <ul>
+          <li>
+            <Link to="artisan">Artisan Soaps</Link>
+          </li>
+          <li>
+            <Link to="/classic">Classic Soaps</Link>
+          </li>
+    </ul>
+  </div>
+  )
+}
 
-export default NavPanel
+export default withRouter(NavPanel)

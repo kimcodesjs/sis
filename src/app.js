@@ -6,15 +6,17 @@ import Artisan from './components/Artisan'
 import Classic from './components/Classic'
 
 const AppRouter = () => (
-    <BrowserRouter>
-        <div> 
-            <Switch>
-                <Route path="/" component={Welcome} exact={true} />
-                <Route path="/artisan" component={Artisan} />
-                <Route path="/classics" component={Classic} />
-            </Switch>
-        </div>
-    </BrowserRouter>
+    <div>
+        <BrowserRouter>
+            <div> 
+                <Switch>
+                    <Route path="/" component={Welcome} exact={true} />
+                    <Route path="/artisan" component={Artisan} />
+                    <Route path="/classic" component={Classic} />
+                </Switch>
+            </div>
+        </BrowserRouter>
+    </div>
 )
 ReactDOM.render(<AppRouter />, document.getElementById('app'))
 
