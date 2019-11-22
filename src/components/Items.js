@@ -1,42 +1,20 @@
-import React, { useState } from 'react'
-import Item from './Item'
+import React from 'react'
 import { Link, useRouteMatch, useParams, Switch, Route, withRouter } from 'react-router-dom'
 
 const Items = (props) => {
-    let { path, url } = useRouteMatch();
-    const [selected, isSelected] = useState('')
-
+    let { url } = useRouteMatch();
+    
+    {console.log(props.location)}
     const itemImgList = props.items.map(item =>
         <li key={item}>
             <Link 
                 to={url+'/'+item}
-                onClick={() => isSelected(item)}>
+                onClick={() => props.isSelected(item)}>
                 <img src={window.location.origin + '/img/'+props.category+'/'+item+'.jpeg'} />
             </Link>
         </li>
         )
-    
-    return (
-        <div>
-        {
-            selected==='' ? (
-                <div>
-                    <ul>{itemImgList}</ul>
-                </div>
-            ) 
-            : (
-                <div>
-                <Item item={selected}/>
-                <Switch>
-                        <Route path={path+"/:item"} component={Item} />
-                </Switch>
-                </div>
-            )
-        }
-        </div>
-        )
-     
+    return <ul>{itemImgList}</ul>
 }
-
 
 export default Items

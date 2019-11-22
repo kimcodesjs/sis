@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams, withRouter } from 'react-router-dom'
 
-const Item = () => {
-    let { item } = useParams()
+const Item = (props) => {
     return (
         <div>
-            <h1>{item}</h1>
+            <h1>{props.item}</h1>
+            <img src={window.location.origin + '/img/'+props.category+'/'+props.item+'.jpeg'} />
+            {console.log(props.location)}
         </div>
     )
 }
