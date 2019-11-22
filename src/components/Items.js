@@ -8,8 +8,7 @@ const Items = (props) => {
     const itemImgList = props.items.map(item =>
         <li key={item}>
             <Link 
-                to={url+'/'+item}
-                onClick={() => props.isSelected(item)}>
+                to={url+'/'+item}>
                 <img src={window.location.origin + '/img/'+props.category+'/'+item+'.jpeg'} />
             </Link>
         </li>
