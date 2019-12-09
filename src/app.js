@@ -21,10 +21,9 @@ return (
                 </Route>
                 <Route path="/:category">
                     <Gallery location={location}/>
-                </Route>
-                
+                </Route>    
             </Switch>
-                
+            
         </BrowserRouter>
     </div>
 )
