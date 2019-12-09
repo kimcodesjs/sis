@@ -1,49 +1,69 @@
 const category = 'artisan'
+const price = 5
 const artisanItems = [
     {
-        title: 'aspirations',
+        title: 'Aspirations',
+        img: 'aspirations',
         category,
-        description: 'some text'
+        price,
+        description: 'your description here'
+        
     },
     {
-        title: 'black-raspberry-vanilla',
+        title: 'Black Raspberry Vanilla',
+        img: 'black-raspberry-vanilla',
         category,
-        description: 'some text'
+        price,
+        description: 'your description here'
     },
     {
-        title: 'black-tie',
+        title: 'Black Tie',
+        img: 'black-tie',
         category,
-        description: 'some text'
+        price,
+        description: 'your description here'
     },
     {
-        title: 'celestial-waters',
+        title: 'Celestial Waters',
+        img: 'celestial-waters',
         category,
-        description: 'some text'
+        price,
+        description: 'your description here'
     },
     {
-        title: 'cotton-fields',
+        title: 'Cotton Fields',
+        img: 'cotton-fields',
         category,
-        description: 'some text'
+        price,
+        description: 'your description here'
     },
     {
-        title: 'dragon\'s-blood',
+        title: 'Dragon\'s Blood',
+        img: 'dragon\'s-blood',
         category,
-        description: 'some text'
+        price,
+        description: 'your description here'
     },
     {
-        title: 'green-smoothie',
+        title: 'Green Smoothie',
+        img: 'green-smoothie',
         category,
-        description: 'some text'
+        price,
+        description: 'your description here'
     },
     {
-        title: 'heavenly-bouquet',
+        title: 'Heavenly Bouquet',
+        img: 'heavenly-bouquet',
         category,
-        description: 'some text'
+        price,
+        description: 'your description here'
     },
     {
-        title: 'mulberry',
+        title: 'Mulberry',
+        img: 'mulberry',
         category,
-        description: 'some text'
+        price,
+        description: 'your description here'
     }
 ]
 
