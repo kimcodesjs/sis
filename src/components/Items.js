@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link, useRouteMatch, useParams, Switch, Route, withRouter } from 'react-router-dom'
-
+const imgStyle = {
+    width: '60%'
+}  
 const Items = (props) => {
     let { url } = useRouteMatch();
     
@@ -9,7 +11,7 @@ const Items = (props) => {
         <li key={item}>
             <Link 
                 to={url+'/'+item}>
-                <img src={window.location.origin + '/img/'+props.category+'/'+item+'.jpeg'} />
+                <img style={imgStyle} src={window.location.origin + '/img/'+props.category+'/'+item+'.jpeg'} />
             </Link>
         </li>
         )

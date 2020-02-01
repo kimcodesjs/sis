@@ -3,6 +3,9 @@ import { useParams, withRouter } from 'react-router-dom'
 import artisanItems from '../data/Artisan'
 import ScrollToTopOnMount from './ScrollToTopOnMount'
 
+const imgStyle = {
+    width: '40%'
+}
 
 const Item = () => {
     let category = useParams().category
@@ -14,7 +17,7 @@ const Item = () => {
             <h2>{item.title}</h2>
             <h3>{item.description}</h3>
             <h3>${item.price}.00</h3>
-            <img src={window.location.origin + '/img/'+category+'/'+item.img+'.jpeg'} />
+            <img style={imgStyle} src={window.location.origin + '/img/'+category+'/'+item.img+'.jpeg'} />
             </div>
         )
     }

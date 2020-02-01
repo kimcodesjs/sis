@@ -5,13 +5,14 @@ import Welcome from './components/Welcome'
 import NavPanel from './components/NavPanel'
 import Gallery from './components/Gallery'
 import Item from './components/Item'
+import ShoppingCart from './components/ShoppingCart'
 
 const AppRouter = () => {
 return (
     <div>
         <BrowserRouter>
 
-            <NavPanel />
+            <NavPanel className='header'/>
 
             <Switch>
                 <Route path="/" component={Welcome} exact={true} />
@@ -24,6 +25,7 @@ return (
                 </Route>    
             </Switch>
             
+            <ShoppingCart className='shopping-cart'/>
         </BrowserRouter>
     </div>
 )
