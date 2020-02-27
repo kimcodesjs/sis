@@ -14,7 +14,7 @@ const ShoppingCart = (props) => {
     
     const cartContent = () => {
         toggle ? isToggled(false) : isToggled(true)
-        console.log(toggle)
+        
     }
     return (
         <a onClick={cartContent}>
