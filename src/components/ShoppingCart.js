@@ -10,13 +10,14 @@ const iconStyle = {
 }
 
 const ShoppingCart = (props) => {
-    const [toggle, isToggled] = useState(false)
+    const [toggle, isToggled] = useState(true)
     
     const cartContent = () => {
         toggle ? isToggled(false) : isToggled(true)
+        console.log(toggle)
     }
     return (
-        <a href="#" onClick={cartContent}>
+        <a onClick={cartContent}>
             <ion-icon style={iconStyle} name="cart"></ion-icon>
         </a>
     )

@@ -7,15 +7,17 @@ import Gallery from './components/Gallery'
 import Item from './components/Item'
 import ShoppingCart from './components/ShoppingCart'
 
+
 const AppRouter = () => {
 return (
     <div>
+        
         <BrowserRouter>
 
             <NavPanel className='header'/>
 
             <Switch>
-                <Route path="/" component={Welcome} exact={true} />
+                <Route path="/" component={Welcome} exact={true}/>
                 <Route path={'/:category/:item'}>
                         <Item 
                             location={location}/>
