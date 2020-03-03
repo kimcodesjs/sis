@@ -10,6 +10,7 @@ const iconStyle = {
 }
 
 const ShoppingCart = (props) => {
+    /* move toggle to state */
     const [toggle, isToggled] = useState(true)
     
     const cartContent = () => {
