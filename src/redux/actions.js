@@ -1,9 +1,13 @@
 export const addToCart = id => ({
     type: 'ADD_TO_CART',
-    payload: { id }
+    id
 })
 
 export const removeFromCart = id => ({
     type: 'REMOVE_FROM_CART',
-    payload: { id }
+    id
+})
+
+export const toggleVisibility = () => ({
+    type: 'TOGGLE_VISIBILITY'
 })
