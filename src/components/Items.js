@@ -6,7 +6,6 @@ const imgStyle = {
 const Items = (props) => {
     let { url } = useRouteMatch();
     
-    {console.log(props.location)}
     const itemImgList = props.items.map(item =>
         <li key={item}>
             <Link 
