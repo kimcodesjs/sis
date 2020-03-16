@@ -4,10 +4,33 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Serenity in Soap</title>
+        <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
     </head>
     <body>
         <div id="app"></div>
-        <script src="/bundle.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
 
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyADMGVZYwEu4zrMT2L6WknVYmSP_UEW_7Y",
+                authDomain: "serenity-in-soap.firebaseapp.com",
+                databaseURL: "https://serenity-in-soap.firebaseio.com",
+                projectId: "serenity-in-soap",
+                storageBucket: "serenity-in-soap.appspot.com",
+                messagingSenderId: "99495186322",
+                appId: "1:99495186322:web:b047ad6d8c1a2530653b4b",
+                measurementId: "G-K9MT90LW4G"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+        </script>
+        <script src="/bundle.js"></script>
     </body>
 </html>
