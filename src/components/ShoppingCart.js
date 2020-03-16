@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { toggleVisibility, removeFromCart } from '../redux/actions'
+import { toggleVisibility } from '../redux/actions'
 import Basket from './Basket'
 
 const iconStyle = {
@@ -12,13 +12,10 @@ const iconStyle = {
     cursor: 'pointer'
 }
 
-// next: debug basket render
-const ShoppingCart = ({ dispatch }, props) => {
+const ShoppingCart = (props) => {
     return (
         <div>
-            <a onClick={e => {
-                e.preventDefault()
-                dispatch(toggleVisibility())}}>
+            <a onClick={props.toggleVisibility}>
                 <ion-icon style={iconStyle} name="cart"></ion-icon>
             </a>
             <Basket />
@@ -32,4 +29,10 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(ShoppingCart)
+const mapDispatchToProps = dispatch => {
+    return {
+        toggleVisibility: () => dispatch({ type: 'TOGGLE_VISIBILITY' })
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCart)
