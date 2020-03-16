@@ -29,5 +29,4 @@ const Item = ({ dispatch }) => {
     }
     
 }
-
 export default connect()(withRouter(Item))

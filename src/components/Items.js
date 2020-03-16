@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useRouteMatch, useParams, Switch, Route, withRouter } from 'react-router-dom'
+import { Link, useRouteMatch } from 'react-router-dom'
 const imgStyle = {
     width: '60%'
 }  
