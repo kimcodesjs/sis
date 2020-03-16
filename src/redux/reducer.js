@@ -15,9 +15,9 @@ export const basketReducer = (state = initialState, action) => {
             }) 
         }
         case 'REMOVE_FROM_CART': {
-            let id = action.id
+
             return {
-                basket: state.basket.filter(id => id !== id),
+                basket: state.basket.filter(id => id !== action.id),
                 cartVisibility: state.cartVisibility
             }
         }

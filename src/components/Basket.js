@@ -17,17 +17,31 @@ const Basket = (props) => {
     } else {
         listStyle.opacity = '0'
     }
+    
     const basket = props.basket.map(item =>
         <li key={item}>
-            {item}
+            {item} 
+            <a onClick={ e => { 
+                e.preventDefault()
+                props.removeFromCart(item)}}>
+                <ion-icon name="close-circle-outline"></ion-icon>
+            </a>
         </li>
         )
     return <ul style={listStyle}>{basket}</ul>
     }
+
+const mapDispatchToProps = dispatch => {
+    return {
+        removeFromCart: (item) => dispatch({ type: 'REMOVE_FROM_CART', id: item })
+    }
+}
 const mapStateToProps = state => {
     return {
         basket: state.basket,
         visibility: state.cartVisibility
     }
 }
-export default connect(mapStateToProps)(Basket)
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Basket)
