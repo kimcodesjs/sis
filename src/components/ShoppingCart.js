@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { toggleVisibility } from '../redux/actions'
 import Basket from './Basket'
 
 const iconStyle = {
@@ -13,6 +12,7 @@ const iconStyle = {
 }
 
 const ShoppingCart = (props) => {
+
     return (
         <div>
             <a onClick={props.toggleVisibility}>
@@ -23,11 +23,6 @@ const ShoppingCart = (props) => {
         </div>
     )
 }
-const mapStateToProps = state => {
-    return {
-        visibility: state.cartVisibility
-    }
-}
 
 const mapDispatchToProps = dispatch => {
     return {
@@ -35,4 +30,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCart)
+export default connect(null, mapDispatchToProps)(ShoppingCart)
