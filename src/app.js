@@ -20,11 +20,11 @@ const App = () => {
 
                 <Switch>
                     <Route path="/" component={Welcome} exact={true}/>
-                    <Route path={'/:category/:item'}>
+                    <Route path={'/:collection/:item'}>
                             <Item 
                                 location={location}/>
                     </Route>
-                    <Route path="/:category">
+                    <Route path="/:collection">
                         <Gallery location={location}/>
                     </Route>    
                 </Switch>
