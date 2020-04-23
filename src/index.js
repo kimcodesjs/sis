@@ -4,11 +4,13 @@ import App from './App'
 
 import { Provider } from 'react-redux'
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux'
-import { reduxFirestore, firestoreReducer, getFirestore } from 'redux-firestore'
+import { reduxFirestore, firestoreReducer, getFirestore, createFirestoreInstance } from 'redux-firestore'
 import firebase from 'firebase/app'
 import 'firebase/firestore'
-import { basketReducer } from './redux/reducer'
+import { basketReducer } from './redux/basket-reducer'
+import { viewReducer } from './redux/view-reducer'
 import thunk from 'redux-thunk'
+import { ReactReduxFirebaseProvider, firebaseReducer } from 'react-redux-firebase'
 
 var firebaseConfig = {
     apiKey: "AIzaSyADMGVZYwEu4zrMT2L6WknVYmSP_UEW_7Y",
@@ -24,8 +26,10 @@ firebase.initializeApp(firebaseConfig);
 firebase.firestore()
 
 const rootReducer = combineReducers({
+    firebase: firebaseReducer,
     firestore: firestoreReducer,
-    cart: basketReducer
+    cart: basketReducer,
+    view: viewReducer
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -35,9 +39,21 @@ const Store = createStore(rootReducer, composeEnhancers(
     reduxFirestore(firebase)
 ))
 
+const rrfConfig = {
+    userProfile: 'users'
+}
+const rrfProps = {
+    firebase,
+    config: rrfConfig,
+    dispatch: Store.dispatch,
+    createFirestoreInstance
+}
+
 ReactDOM.render(
     <Provider store={Store}>
-        <App />
+        <ReactReduxFirebaseProvider {...rrfProps}>
+            <App />
+        </ReactReduxFirebaseProvider>
     </Provider>, 
     document.getElementById('app')
 )
