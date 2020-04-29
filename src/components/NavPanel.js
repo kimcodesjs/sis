@@ -15,14 +15,14 @@ const NavPanel = (props) => {
     <ul>
         <li>
           <Link 
-            to='/artisan'>
-            Artisan Soaps
+            to='/Tier 1'>
+            Tier 1 Soaps
           </Link>
         </li>
         <li>
           <Link 
-            to='/classic'>
-            Classic Soaps
+            to='/Tier 2'>
+            Tier 2 Soaps
           </Link>
         </li>
         <li>
