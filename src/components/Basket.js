@@ -9,7 +9,7 @@ const Basket = (props) => {
         top: '30px',
         zIndex: '3',
         align: 'left',
-        opacity: '0',
+        opacity: '1',
         transition: 'opacity 1s'
     }
     if (props.visibility) {
@@ -29,7 +29,7 @@ const Basket = (props) => {
         </li>
         )
     return <ul style={listStyle}>{basket}</ul>
-    }
+}
 
 const mapDispatchToProps = dispatch => {
     return {
@@ -37,9 +37,10 @@ const mapDispatchToProps = dispatch => {
     }
 }
 const mapStateToProps = state => {
+    
     return {
-        basket: state.basket,
-        visibility: state.cartVisibility
+        basket: state.cart.basket,
+        visibility: state.cart.cartVisibility
     }
 }
 
