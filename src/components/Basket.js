@@ -36,13 +36,11 @@ const mapDispatchToProps = dispatch => {
         removeFromCart: (item) => dispatch({ type: 'REMOVE_FROM_CART', id: item })
     }
 }
-const mapStateToProps = state => {
-    
+const mapStateToProps = state => {  
     return {
         basket: state.cart.basket,
         visibility: state.cart.cartVisibility
     }
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Basket)
