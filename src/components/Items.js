@@ -14,7 +14,7 @@ const Items = (props) => {
     let collection = useParams().collection
     let itemList = []
     if (collection === 'Tier 1') {
-        itemList = props.itemsT1.map((item) => {
+        itemList = props.T1.map((item) => {
           return (
             <li key={item.img}>
                 <Link 
@@ -27,7 +27,7 @@ const Items = (props) => {
           )  
         })
     } else if (collection === 'Tier 2') {
-        itemList = props.itemsT2.map((item) => {
+        itemList = props.T2.map((item) => {
             return (
               <li key={item.img}>
                   <Link 
@@ -40,16 +40,16 @@ const Items = (props) => {
             )  
         })
     }
+  
     // why does this log twice?
-    console.log(props.t1)
+    console.log(props.T1)
     return <ul>{itemList}</ul>
 }
 
 const mapStateToProps = state => {
     return {
-        itemsT1: state.firestore.ordered.tier1 ? state.firestore.ordered.tier1.map(item => item) : [],
-        itemsT2: state.firestore.ordered.tier2 ? state.firestore.ordered.tier2.map(item => item) : [],
-        t1: state.firestore.ordered.tier1
+        T1: state.firestore.ordered.tier1 ? state.firestore.ordered.tier1 : [],
+        T2: state.firestore.ordered.tier2 ? state.firestore.ordered.tier2 : []
     }
 }
 // persist state thru page refresh?
